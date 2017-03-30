@@ -18,10 +18,12 @@
 <body>
     <div id="backgroundGame">
       <div id="rules">
-        <p>Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
+        <p id="rulesText">Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
           <br /> Tu dois cliquer sur la personnalité qui prononce régulièrement la citation avec ton unique arme : un clavier !
           <br /> ATTENTION, si tu te trompes, tu perds une vie et tu en as seulement 3. Seras-tu capable d’atteindre le dernier niveau ? Lance-toi Héticien !</p>
-        <input type="submit" id="buttonStart" value="J'ai compris, je joue !" />
+        <p id ="loseText">Oh non, t'es mauvais ! Ch'est triste ! Réessayons !</p>
+        <p id ="winText">Yéééé ! Tu as gagné ! Tu refais une partie ?</p>
+        <input type="submit" id="buttonStart" value="GO !" />
       </div>
       <div id="bubble">
         <p id="sentence"></p>
@@ -66,6 +68,7 @@
     <script src="../scripts/gauges.json"></script>
     <script src="../scripts/sounds.json"></script>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/initAndRestart.js"></script>
     <!--<script>
       $(document).fondation()
     </script>-->
