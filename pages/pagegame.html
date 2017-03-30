@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Le jeu !</title>
   <link rel="stylesheet" href="../styles/foundation.css" />
-  <link rel="stylesheet" href="../styles/stylespagegame.css" /> </head>
+  <link rel="stylesheet" href="../styles/stylespagegame.css" /> 
+  <link rel="stylesheet" href="../styles/game.css"></head>
 
 <body>
   <!-- Header -->
@@ -22,8 +23,50 @@
   <!-- End of Header -->
   <!-- Game -->
   <section>
-    <!-- <img src="images/heticvert.png" alt="hetic"/> -->
-    <div class="game"> </div>
+    <div id="backgroundGame">
+      <div id="rules">
+        <p id="rulesText">Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
+          <br /> Tu dois cliquer sur la personnalité qui prononce régulièrement la citation avec ton unique arme : un clavier !
+          <br /> ATTENTION, si tu te trompes, tu perds une vie et tu en as seulement 3. Seras-tu capable d’atteindre le dernier niveau ? Lance-toi Héticien !</p>
+        <p id ="loseText">Oh non, t'es mauvais ! Ch'est triste ! Réessayons !</p>
+        <p id ="winText">Yéééé ! Tu as gagné ! Tu refais une partie ?</p>
+        <input type="submit" id="buttonStart" value="GO !" />
+      </div>
+      <div id="bubble">
+        <p id="sentence"></p>
+      </div>
+      <div id="lives"><img src="../images/lives/3.png" alt="health bar"></div>
+      <div id="score"><img src="../images/progress/0.png" alt="score bar"></div>
+      <div id="doors">
+        <!-- LEFT DOORS/CHARACTERS -->
+        <div id="doorAndCharacterL1" class="close">
+          <div id="doorL1"><img src="../images/doors/left.png" alt="first open door on the left"></div>
+          <div id="characterL1" class="rotationLeftCharacters avatars"></div>
+        </div>
+        <div id="doorAndCharacterL2" class="close">
+          <div id="doorL2"><img src="../images/doors/left.png" alt="second open door on the left"></div>
+          <div id="characterL2" class="rotationLeftCharacters avatars"></div>
+        </div>
+        <div id="doorAndCharacterL3" class="close">
+          <div id="doorL3"><img src="../images/doors/left.png" alt="third open door on the left"></div>
+          <div id="characterL3" class="rotationLeftCharacters avatars"></div>
+        </div>
+        <!-- RIGHT DOORS/CHARACTERS -->
+        <div id="doorAndCharacterR1" class="close">
+          <div id="doorR1"><img src="../images/doors/right.png" alt="first open door on the right"></div>
+          <div id="characterR1" class="rotationRightCharacters avatars"></div>
+        </div>
+        <div id="doorAndCharacterR2" class="close">
+          <div id="doorR2"><img src="../images/doors/right.png" alt="second open door on the right"></div>
+          <div id="characterR2" class="rotationRightCharacters avatars"></div>
+        </div>
+        <div id="doorAndCharacterR3" class="close">
+          <div id="doorR3"><img src="../images/doors/right.png" alt="third open door on the right"></div>
+          <div id="characterR3" class="rotationRightCharacters avatars"></div>
+        </div>
+      </div>
+      <div id="scoreTotal">Score total : 00</div>
+    </div>
   </section>
   <!-- End of Game -->
   <!-- Twitter -->
@@ -50,10 +93,14 @@
     </div>
   </footer>
   <!-- End of Footer -->
-</body>
 <script src="../scripts/vendor/jquery.js"></script>
-<script src="../scripts/vendor/what-input.js"></script>
-<script type="../text/javascript" src="scripts/main.js"></script>
+    <script src="../scripts/vendor/what-input.js"></script>
+    <script src="../scripts/vendor/foundation.min.js"></script>
+    <script src="../scripts/tableCharacters.json"></script>
+    <script src="../scripts/gauges.json"></script>
+    <script src="../scripts/sounds.json"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/initAndRestart.js"></script>
 <!-- Twitter script -->
 <script>
   ! function (d, s, id) {
