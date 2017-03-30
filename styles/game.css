@@ -29,7 +29,9 @@
 #sentence {
   background-image: url(../images/bubble.png);
   font-family: "futura";
-  font-size: 36px;
+  font-size: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
   text-align: center;
   top: 0;
   width: 500px;
@@ -39,7 +41,7 @@
   height: 275px;
   left: 50%;
   transform: translate(-50%);
-  padding-top: 75px;
+  padding-top: 100px;
 }
 
 #rules {
