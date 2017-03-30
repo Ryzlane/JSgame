@@ -152,6 +152,32 @@ CHARACTER LIST
   color: white;
 }
 
+/* BUTTON PLAY */
+
+#playbutton{
+  background-color: white;
+  padding: 7px 5px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  margin-top: 50px;
+  border: 1px solid black;
+  max-width: 10%;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+#playbutton:hover{
+  background-color:#85C62C ;
+  color: white;
+  transition: 0.8s;
+  border: 1px solid white;
+}
+
+a#playbut{
+  color: black;
+}
 /*******************
 
 AVIS
