@@ -27,16 +27,11 @@ GAME
 ******************/
 section {
 Background-color:white;
-margin:0 auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: 60px;
 width:914px;
 text-align:center;
-}
-
-.game {
-  margin-top:60px;
-  width:914px;
-  height:663px;
-  background:grey;
 }
 
 /*******************
