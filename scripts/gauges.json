@@ -1,0 +1,27 @@
+var divLives = document.getElementById("lives");
+var divScore = document.getElementById("score");
+var scoreTotal = document.getElementById("scoreTotal").innerText;
+
+function loseLife() {
+  var actualHealthBar = divLives.lastElementChild.src;
+  var actualHealth = actualHealthBar[actualHealthBar.length - 5];
+  var newHealth = actualHealth - 1;
+  if (newHealth >= 0) {
+    divLives.lastElementChild.src = '../images/lives/' + newHealth + '.png';
+  }
+}
+
+function gainScore() {
+  var actualScoreBar = divScore.lastElementChild.src;
+  var actualScore = actualScoreBar[actualScoreBar.length - 5];
+  var newScore = parseInt(actualScore) + 1;
+  if (newScore <= 4) {
+    divScore.lastElementChild.src = '../images/progress/' + newScore + '.png';
+  }
+}
+
+function gainScoreTotal(){
+  oldScore = scoreTotal.substr(14);
+  newScore = parseInt(oldScore) + 10;
+  scoreTotal += newScore;
+}
