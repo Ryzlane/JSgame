@@ -57,7 +57,7 @@ VIDEO
   text-shadow: 2spx 2px 2px #000000;
   color:white;
   z-index:99;
-  bottom: 100%;
+  top : 25%;
 }
 
 
@@ -65,7 +65,6 @@ VIDEO
   font-size: 2.8em;
   color:#ffffff;
   text-align:center;
-  padding-top:200px; 
   font-family:'Roboto';
 }
 .videoClick {
