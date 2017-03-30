@@ -20,6 +20,10 @@ header {
   text-align: center;
 }
 
+
+#musique{
+  visibility: hidden; 
+}
 /*******************
 
 GAME
