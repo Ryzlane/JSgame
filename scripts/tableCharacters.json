@@ -1,0 +1,32 @@
+var names = ["Frédéric Martinez", "Richard Martinez", "Jean-Christophe Beaux", "Denys Chomel", "Joël Bourienne", "Pierre De Beauchene", "Grégoire Puget", "Daniel VillaMonteiro", "Agnès Rouvrais", "Priscille Marty", "Clara Boissier"];
+
+var quotes = [
+  ["L'opacité, c'est la transparence", "Moi j'aurais pas fait comme ça", "Alors cet outil on l'utilise à la mano", "A 00h01 c'est fini, je relève", "Si vous ne suivez pas le tutoriel, vous n'avez pas de créativité"], 
+  ["Donnez-moi un chiffre !", "VOUS ! Au tableau !", "Faîtes-moi un plan, vous avez 5 minutes.", "Faites-moi la gépolitique de l'ours polaire", "Il faut lire les enfants, au lieu de jouer à Facebook !"], 
+  ["Il n'y a rien de fait, s'il reste à faire", "Faites toujours très bien !"], 
+  ["Vous êtes désormais un Héticien, à vous de vous comporter comme tel", "Dans mon enfance..."], 
+  ["Il y a un sac dans mon allée", "Vous êtes sur mon estrade", "Non, c'est moche", "Il y a des gens bizarres dans votre groupe", "Bienvenue en H1 l'année prochaine", "Ca fera -8000 pour votre groupe", "Vous prendrez votre stylo Cartier et vous soulignerez de pourpre et d'argent", "Hm... Bien sûr", "*petite inspiration rapide*"], 
+  ["Avez-vous une question ? ... Non, ok on continue", "C'est marrant que vous assimiliez cette notion, moi il m'a fallu plus de temps"], 
+  ["Alors ça on utilise jamais, mais sachez au moins que ça existe", "Mais on ne peut rien vous apprendre en fait, vous êtes trop forts", "Vous êtes ma meilleur classe", "Même moi je sais pas"], 
+  ["Qu'est-ce qu'internet ?", "Qu'est-ce qu'une voiture ?", "Vous êtes un moldu si vous ne connaissez pas Richard Stallman !"], 
+  ["Faites-moi une structure en spaghetti et chamallow", "What is BATNA?", "Ok, talk time!"], 
+  ["Ce sont des inepties !!!", "J'ai corrigé la RATP et je l'ai partagé sur Facebook", "RépercuSSion, il n'y a pas de T !"], 
+  ["Qu'est-ce que vous avez fait ce week-end ?", "Oulala, je suis en retard sur le cours", "Qu'est ce qu'une machine coercitif ?"]
+];
+
+var images = ['<img src="../images/characters/Fredo/fredofull.png" alt="character behind first open door on the left">','<img src="../images/characters/Martinez/martifull.png" alt="character behind first open door on the left">','<img src="../images/characters/Beaux/beauxfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Chomel/chomfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Bourienne/bouboufull.png" alt="character behind first open door on the left">','<img src="../images/characters/DeBeauchene/dbcfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Puget/pugetfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Marty/martyfull.png" alt="character behind first open door on the left">','<img src="../images/characters/Boissier/boissfull.png" alt="character behind first open door on the left">'];
+
+var PrototypeCharacter = {
+  init: function (name, sentences, image) {
+    this.name = name;
+    this.sentences = sentences;
+    this.image = image;
+  }
+};
+
+var characters = [];
+
+for(var i = 0; i < names.length; i++){
+  characters[i] = Object.create(PrototypeCharacter);
+  characters[i].init(names[i], quotes[i], images[i]);
+}
