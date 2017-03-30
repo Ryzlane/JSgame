@@ -57,6 +57,10 @@
   z-index: 99;
 }
 
+#winText, #loseText {
+  display:none;
+}
+
 #buttonStart {
   background-color: #75ca00;
   border: none;
