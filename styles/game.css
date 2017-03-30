@@ -14,8 +14,16 @@
 }
 
 #lives{
+  width: 125px;
+  padding: 10px;
+}
+
+#score{
   width: 150px;
   padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
 }
 
 #sentence {
@@ -67,6 +75,17 @@
   background-color: #ffffff;
   color: #75ca00;
   transition: 300ms linear all;
+}
+
+#scoreTotal{
+  position: absolute;
+  bottom: 25px;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 15px;
+  width: 250px;
 }
 
 
