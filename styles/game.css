@@ -13,14 +13,33 @@
   margin-right: auto;
 }
 
-#sentence {
-  font-family: "futura";
-  font-size: 42px;
+#lives{
+  width: 150px;
+  padding: 10px;
+}
+
+/*#bubble{
   position: absolute;
+  z-index: 1;
   left: 50%;
   transform: translate(-50%);
-  top: 75px;
-  width: 600px;
+  text-align: center;
+}*/
+
+#sentence {
+  background-image: url(../images/bubble.png);
+  font-family: "futura";
+  font-size: 36px;
+  text-align: center;
+  top: 0;
+  width: 500px;
+  z-index: 2;
+  position: absolute;
+  width: 700px;
+  height: 275px;
+  left: 50%;
+  transform: translate(-50%);
+  padding-top: 75px;
 }
 
 #rules {
