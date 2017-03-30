@@ -39,6 +39,7 @@ function lost(){
   rules.style.display = "block";
   document.querySelector("#rulesText").style.display = "none";
   document.querySelector("#loseText").style.display = "block";
+  divLives.lastElementChild.src='../images/lives/3.png';
   
 }
 
@@ -50,5 +51,6 @@ function won(){
   rules.style.display = "block";
   document.querySelector("#rulesText").style.display = "none";
   document.querySelector("#winText").style.display = "block";
+  divScore.lastElementChild.src='../images/progress/0.png';
   
 }
