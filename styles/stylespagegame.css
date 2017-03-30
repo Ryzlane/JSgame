@@ -1,0 +1,134 @@
+/*******************
+
+Header
+
+******************/
+
+header {
+  background-color: #F4F4F4;
+}
+.menu{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align:center;
+}
+
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*******************
+
+GAME
+
+******************/
+section {
+Background-color:white;
+margin:0 auto;
+width:914px;
+text-align:center;
+}
+
+.game {
+  margin-top:60px;
+  width:914px;
+  height:663px;
+  background:grey;
+}
+
+/*******************
+
+Twitter
+
+******************/
+.twitter {
+  margin:0 auto;
+  width:914px;
+  margin-top:5px;
+  text-align:right;
+}
+
+
+/*******************
+
+Back to home
+
+******************/
+
+.backToHome {
+  margin-top:10px;
+  margin:0 auto;
+  margin-bottom:70px;
+  text-align:center;
+}
+
+#buttonHome{
+  background-color: white;
+  padding: 3px 2px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  max-width: 30%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#buttonHome:hover{
+  background-color:#85C62C ;
+  color: white;
+  transition: 0.8s;
+  border: 1px solid white;
+}
+
+section.backToHome a{
+  color: black;
+}
+
+/*******************
+
+Footer
+
+******************/
+
+footer {
+  background-color:#85C62C;
+  text-align:center;
+  padding-top:30px;
+  padding-bottom:1px;
+  font-family:'Roboto', sans-serif;
+  
+}
+
+footer img {
+  width:180px;
+}
+
+
+.social {
+  padding:0;
+  margin:0;
+  cursor:pointer;
+  font-family:'Roboto', sans-serif;
+}
+
+.social img {
+  opacity:0.7;
+  width:18px;
+  margin:0;
+  padding:0;
+  margin-left:5px;
+  display:inline;
+}
+
+.social p {
+  font-size:13px;
+  margin-top:25px;
+}
+
+
+footer div {
+  padding-bottom:40px;
+}
