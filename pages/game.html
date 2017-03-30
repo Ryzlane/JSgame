@@ -11,54 +11,58 @@
 
   <link rel="stylesheet" href="../styles/foundation.min.css">
   <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/game.css">
 
 </head>
 
 <body>
-  <div id="backgroundGame">
-    <div id="rules">
-      <p>Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
-        <br /> Tu dois cliquer sur la personnalité qui prononce régulièrement la citation avec ton unique arme : un clavier !
-        <br /> ATTENTION, si tu te trompes, tu perds une vie et tu en as seulement 3. Seras-tu capable d’atteindre le dernier niveau ? Lance-toi Héticien !</p>
-      <input type="submit" id="buttonStart" value="J'ai compris, je joue !" />
-    </div>
-    <p id="sentence">J'aurais pas fait comme ça...</p>
-    <div id="lives"><img src="../images/lives/3hearts.png" alt="health bar"></div>
-    <div id="doors">
-      <!-- LEFT DOORS/CHARACTERS -->
-      <div id="doorAndCharacterL1" class="close">
-        <div id="doorL1"><img src="../images/doors/left.png" alt="first open door on the left"></div>
-        <div id="characterL1" class="rotationLeftCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind first open door on the left"></div>
+    <div id="backgroundGame">
+      <div id="rules">
+        <p>Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
+          <br /> Tu dois cliquer sur la personnalité qui prononce régulièrement la citation avec ton unique arme : un clavier !
+          <br /> ATTENTION, si tu te trompes, tu perds une vie et tu en as seulement 3. Seras-tu capable d’atteindre le dernier niveau ? Lance-toi Héticien !</p>
+        <input type="submit" id="buttonStart" value="J'ai compris, je joue !" />
       </div>
-      <div id="doorAndCharacterL2" class="close">
-        <div id="doorL2"><img src="../images/doors/left.png" alt="second open door on the left"></div>
-        <div id="characterL2" class="rotationLeftCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind second open door on the left"></div>
+      <div id="bubble">
+        <p id="sentence"></p>
       </div>
-      <div id="doorAndCharacterL3" class="close">
-        <div id="doorL3"><img src="../images/doors/left.png" alt="third open door on the left"></div>
-        <div id="characterL3" class="rotationLeftCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind third open door on the left"></div>
+      <div id="lives"><img src="../images/lives/3hearts.png" alt="health bar"></div>
+      <div id="doors">
+        <!-- LEFT DOORS/CHARACTERS -->
+        <div id="doorAndCharacterL1" class="close">
+          <div id="doorL1"><img src="../images/doors/left.png" alt="first open door on the left"></div>
+          <div id="characterL1" class="rotationLeftCharacters falseAnswer"></div>
+        </div>
+        <div id="doorAndCharacterL2" class="close">
+          <div id="doorL2"><img src="../images/doors/left.png" alt="second open door on the left"></div>
+          <div id="characterL2" class="rotationLeftCharacters falseAnswer"></div>
+        </div>
+        <div id="doorAndCharacterL3" class="close">
+          <div id="doorL3"><img src="../images/doors/left.png" alt="third open door on the left"></div>
+          <div id="characterL3" class="rotationLeftCharacters falseAnswer"></div>
+        </div>
+        <!-- RIGHT DOORS/CHARACTERS -->
+        <div id="doorAndCharacterR1" class="close">
+          <div id="doorR1"><img src="../images/doors/right.png" alt="first open door on the right"></div>
+          <div id="characterR1" class="rotationRightCharacters falseAnswer"></div>
+        </div>
+        <div id="doorAndCharacterR2" class="close">
+          <div id="doorR2"><img src="../images/doors/right.png" alt="second open door on the right"></div>
+          <div id="characterR2" class="rotationRightCharacters falseAnswer"></div>
+        </div>
+        <div id="doorAndCharacterR3" class="close">
+          <div id="doorR3"><img src="../images/doors/right.png" alt="third open door on the right"></div>
+          <div id="characterR3" class="rotationRightCharacters falseAnswer"></div>
+        </div>
       </div>
-    <!-- RIGHT DOORS/CHARACTERS -->
-    <div id="doorAndCharacterR1" class="close">
-      <div id="doorR1"><img src="../images/doors/right.png" alt="first open door on the right"></div>
-      <div id="characterR1" class="rotationRightCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind first open door on the right"></div>
     </div>
-    <div id="doorAndCharacterR2" class="close">
-      <div id="doorR2"><img src="../images/doors/right.png" alt="second open door on the right"></div>
-      <div id="characterR2" class="rotationRightCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind second open door on the right"></div>
-    </div>
-    <div id="doorAndCharacterR3" class="close">
-      <div id="doorR3"><img src="../images/doors/right.png" alt="third open door on the right"></div>
-      <div id="characterR3" class="rotationRightCharacters"><img src="../images/characters/Rouvrais/rouvfull.png" alt="character behind third open door on the right"></div>
-    </div>
-  </div>
-  </div>
-
-  <script src="../scripts/main.js"></script>
-  <script src="../scripts/vendor/jquery.js"></script>
-  <script src="../scripts/vendor/what-input.js"></script>
-  <script src="../scripts/vendor/foundation.min.js"></script>
-  <!--<script>
+    
+    <script src="../scripts/vendor/jquery.js"></script>
+    <script src="../scripts/vendor/what-input.js"></script>
+    <script src="../scripts/vendor/foundation.min.js"></script>
+    <script src="../scripts/tableCharacters.json"></script>
+    <script src="../scripts/main.js"></script>
+    <!--<script>
       $(document).fondation()
     </script>-->
 </body>
