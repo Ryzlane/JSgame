@@ -11,7 +11,19 @@ var doorAndCharacterR1 = document.getElementById("doorAndCharacterR1");
 var doorAndCharacterR2 = document.getElementById("doorAndCharacterR2");
 var doorAndCharacterR3 = document.getElementById("doorAndCharacterR3");
 var doorsAndCharacters = [doorAndCharacterL1, doorAndCharacterL2, doorAndCharacterL3, doorAndCharacterR1, doorAndCharacterR2, doorAndCharacterR3];
+//****************************** VAR AUDIO ****************************
 
+var doorOpening = new Audio();
+doorOpening.src = '../sounds/openDoor.wav'; // Opendoor
+
+var doorClosing = new Audio();
+doorClosing.src = '../sounds/closeDoor.mp3'; // Close door
+
+var playButton = new Audio();
+playButton.src = '../sounds/play.wav'; // Game start
+
+var gameMusic = new Audio();
+gameMusic.src = '..sounds/music.wav'; // Game theme
 
 // **************************** FONCTIONS ****************************
 
@@ -26,8 +38,10 @@ function moveADoor() {
   if (doorsAndCharacters[random].classList.contains("close") === true) {
     doorsAndCharacters[random].classList.remove("close");
     randomCharacter(doorsAndCharacters[random]);
+    doorOpening.play();
   } else {
     doorsAndCharacters[random].classList.add("close");
+    doorClosing.play();
   }
 }
 
