@@ -23,7 +23,6 @@ function changeClass(objectNewCharacter) {
       presence++;
     }
   });
-  console.log(presence);
   if (presence > 0){
     return "rightAnswer";
   } else {
@@ -58,37 +57,3 @@ function randomQuote() {
   var selectSentence = Math.floor(Math.random() * characters[selectCharacter].sentences.length);
   return characters[selectCharacter].sentences[selectSentence];
 }
-
-// **************************** START THE GAME ****************************
-
-// GENERATE A RANDOM QUOTE
-document.getElementById("sentence").textContent = randomQuote();
-
-// REMOVE RULES
-buttonStart.addEventListener('click', function () {
-    rules.style.display = "none";
-    setInterval(moveADoor, 1000);
-  },
-  false
-);
-
-// CLICK ON CHARACTER
-for (l = 0; l < answers.length; l++) {
-  answers[l].addEventListener('click', function () {
-      if (this.classList.contains("falseAnswer") === true) {
-        console.log("PERDU !");
-        loseLife();
-      } else {
-        console.log("GAGNÉ !")
-        gainScore();
-        gainScoreTotal();
-      }
-    },
-    false
-  );
-
-}
-
-// souris
-// sons personnages ?
-// voir comment gérer le son

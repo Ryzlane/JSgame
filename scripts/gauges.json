@@ -9,6 +9,9 @@ function loseLife() {
   if (newHealth >= 0) {
     divLives.lastElementChild.src = '../images/lives/' + newHealth + '.png';
   }
+  else {
+    lost();
+  }
 }
 
 function gainScore() {
@@ -17,6 +20,9 @@ function gainScore() {
   var newScore = parseInt(actualScore) + 1;
   if (newScore <= 4) {
     divScore.lastElementChild.src = '../images/progress/' + newScore + '.png';
+  }
+  else {
+    won();
   }
 }
 
