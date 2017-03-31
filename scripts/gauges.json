@@ -1,6 +1,6 @@
 var divLives = document.getElementById("lives");
 var divScore = document.getElementById("score");
-var scoreTotal = document.getElementById("scoreTotal").innerText;
+var scoreTotal = document.getElementById("scoreTotal");
 
 function loseLife() {
   var actualHealthBar = divLives.lastElementChild.src;
@@ -27,7 +27,7 @@ function gainScore() {
 }
 
 function gainScoreTotal(){
-  oldScore = scoreTotal.substr(14);
+  oldScore = scoreTotal.innerText;
   newScore = parseInt(oldScore) + 10;
-  scoreTotal += newScore;
+  scoreTotal.innerText = newScore;
 }

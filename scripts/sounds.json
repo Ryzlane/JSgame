@@ -1,11 +1,5 @@
 var doorOpening = new Audio();
-doorOpening.src = '../sounds/openDoor.wav'; // Opendoor
+doorOpening.src = '../sounds/openDoor.wav'; // Open a door
 
 var doorClosing = new Audio();
-doorClosing.src = '../sounds/closeDoor.wav'; // Close door
-
-var playButton = new Audio();
-playButton.src = '../sounds/play.wav'; // Game start
-
-var gameMusic = new Audio();
-gameMusic.src = '..sounds/game.wav'; // Game theme
+doorClosing.src = '../sounds/closeDoor.wav'; // Close a door

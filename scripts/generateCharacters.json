@@ -1,0 +1,45 @@
+var doorsAndCharacters = document.getElementsByClassName("doorsAndCharacters");
+var answers = document.getElementsByClassName("avatars");
+
+var doorOpening = new Audio();
+doorOpening.src = '../sounds/openDoor.wav'; // Open a door
+var doorClosing = new Audio();
+doorClosing.src = '../sounds/closeDoor.wav'; // Close a door
+
+// GENERATE "rightAnswer" CLASS
+function changeClass(objectNewCharacter) {
+  var actualQuote = document.getElementById("sentence").textContent;
+  var presence = 0;
+  objectNewCharacter.sentences.forEach(function (sentenceToCompare) {
+    if (sentenceToCompare === actualQuote){
+      presence++;
+    }
+  });
+  if (presence > 0){
+    return "rightAnswer";
+  } else {
+    return "falseAnswer";
+  }
+}
+
+// GENERATE A RANDOM CHARACTER INSIDE DOORS
+function randomCharacter(door) {
+  var randomCharac = Math.floor(Math.random() * characters.length);
+  var newImage = characters[randomCharac].image;
+  door.lastElementChild.innerHTML = newImage;
+  door.lastElementChild.classList.remove("falseAnswer", "rightAnswer");
+  door.lastElementChild.classList.add(changeClass(characters[randomCharac]));
+}
+
+// OPEN AND CLOSE THE DOORS WITH A NEW CHARACTER EACH TIME
+function moveADoor() {
+  var random = Math.floor(Math.random() * doorsAndCharacters.length);
+  if (doorsAndCharacters[random].classList.contains("close") === true) {
+    doorsAndCharacters[random].classList.remove("close");
+    randomCharacter(doorsAndCharacters[random]);
+    doorOpening.play();
+  } else {
+    doorsAndCharacters[random].classList.add("close");
+    doorClosing.play();
+  }
+}
