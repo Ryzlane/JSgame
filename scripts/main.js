@@ -41,7 +41,6 @@ for (l = 0; l < answers.length; l++) {
 
 
 function lost(){
-  clearInterval(setInterval(moveADoor, 1000));
   rules.style.display = "block";
   document.querySelector("#rulesText").style.display = "none";
   document.querySelector("#winText").style.display = "none";
@@ -55,7 +54,7 @@ function lost(){
 // **************************** RESTART - WIN VER. ****************************
 
 function won(){
-  clearInterval(setInterval(moveADoor, 1000));
+  setInterval(moveADoor, 1000);
   rules.style.display = "block";
   document.querySelector("#rulesText").style.display = "none";
   document.querySelector("#loseText").style.display = "none";
