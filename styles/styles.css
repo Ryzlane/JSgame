@@ -28,9 +28,9 @@ header {
 }
 
 
-/***********************************
+/**************************
 VIDEO 
-*************************************/
+***************************/
 
 #mainVid {
   width:100%;
@@ -65,12 +65,11 @@ VIDEO
   font-size: 2.8em;
   color:#ffffff;
   text-align:center;
-  font-family:'Roboto';
+  font-family:'Roboto', 'Arial';
 }
 .videoClick {
   text-align:center;
   margin:0 auto;
-  /* background-color:rgba(241, 241, 241, 0.25);*/
 }
 .videoClick a{
   color:white;
@@ -93,11 +92,10 @@ VIDEO
   font-size: 1.7em;
 }
 
+/*********************************
 
-/* #85C62C VERt */
-
-/**********************************
 INTRO
+
 *********************************/
 #intro{
   background-color: #F4F4F4;
@@ -135,8 +133,15 @@ section#intro a{
 }
 
 /***********************
-CHARACTER LIST
+
+MAIN
+
 ************************/
+
+/******************
+CHARACTERS LIST
+******************/
+
 #charatitle{
   font-size: 32px;
   font-weight: bold;
@@ -178,10 +183,8 @@ CHARACTER LIST
 a#playbut{
   color: black;
 }
-/*******************
-
-AVIS
-
+/******************
+REVIEWS
 ******************/
 
 #carousel {
@@ -288,7 +291,7 @@ a#prev:hover, a#next:hover {
 
 /*******************
 
-Galeries
+Galleries
 
 ******************/
 
@@ -339,7 +342,7 @@ Galeries
 
 /*******************
 
-Footer
+FOOTER
 
 ******************/
 
