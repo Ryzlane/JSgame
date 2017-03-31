@@ -7,17 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Le jeu !</title>
   <link rel="stylesheet" href="../styles/foundation.css" />
-  <link rel="stylesheet" href="../styles/stylespagegame.css" /> 
-  <link rel="stylesheet" href="../styles/game.css"></head>
+  <link rel="stylesheet" href="../styles/stylespagegame.css" />
+  <link rel="stylesheet" href="../styles/game.css">
+</head>
 
 <body>
   <!-- Header -->
   <header id="header">
     <div class="menu row">
-     <a href="../index.html">
-       <div class="columns small-2" id="logo"> <img src="../images/icones/logo.png" alt="Logo"> </div>
-     </a>
-      
+      <a href="../index.html">
+        <div class="columns small-2" id="logo"> <img src="../images/icones/logo.png" alt="Logo"></div>
+      </a>
+
     </div>
   </header>
   <!-- End of Header -->
@@ -28,8 +29,8 @@
         <p id="rulesText">Les règles du jeu sont simple : une citation s’affiche et le but est de deviner à qui elle appartient. Plusieurs personnalités d’HETIC apparaitront derrière les portes du couloir.
           <br /> Tu dois cliquer sur la personnalité qui prononce régulièrement la citation avec ton unique arme : un clavier !
           <br /> ATTENTION, si tu te trompes, tu perds une vie et tu en as seulement 3. Seras-tu capable d’atteindre le dernier niveau ? Lance-toi Héticien !</p>
-        <p id ="loseText">Oh non, t'es mauvais ! Ch'est triste ! Réessayons !</p>
-        <p id ="winText">Yéééé ! Tu as gagné ! Tu refais une partie ?</p>
+        <p id="loseText">Oh non, t'es mauvais ! Ch'est triste ! Réessayons !</p>
+        <p id="winText">Yéééé ! Tu as gagné ! Tu refais une partie ?</p>
         <input type="submit" id="buttonStart" value="GO !" />
       </div>
       <div id="bubble">
@@ -39,39 +40,38 @@
       <div id="score"><img src="../images/progress/0.png" alt="score bar"></div>
       <div id="doors">
         <!-- LEFT DOORS/CHARACTERS -->
-        <div id="doorAndCharacterL1" class="close">
+        <div id="doorAndCharacterL1" class="doorsAndCharacters close">
           <div id="doorL1"><img src="../images/doors/left.png" alt="first open door on the left"></div>
           <div id="characterL1" class="rotationLeftCharacters avatars"></div>
         </div>
-        <div id="doorAndCharacterL2" class="close">
+        <div id="doorAndCharacterL2" class="doorsAndCharacters close">
           <div id="doorL2"><img src="../images/doors/left.png" alt="second open door on the left"></div>
           <div id="characterL2" class="rotationLeftCharacters avatars"></div>
         </div>
-        <div id="doorAndCharacterL3" class="close">
+        <div id="doorAndCharacterL3" class="doorsAndCharacters close">
           <div id="doorL3"><img src="../images/doors/left.png" alt="third open door on the left"></div>
           <div id="characterL3" class="rotationLeftCharacters avatars"></div>
         </div>
         <!-- RIGHT DOORS/CHARACTERS -->
-        <div id="doorAndCharacterR1" class="close">
+        <div id="doorAndCharacterR1" class="doorsAndCharacters close">
           <div id="doorR1"><img src="../images/doors/right.png" alt="first open door on the right"></div>
           <div id="characterR1" class="rotationRightCharacters avatars"></div>
         </div>
-        <div id="doorAndCharacterR2" class="close">
+        <div id="doorAndCharacterR2" class="doorsAndCharacters close">
           <div id="doorR2"><img src="../images/doors/right.png" alt="second open door on the right"></div>
           <div id="characterR2" class="rotationRightCharacters avatars"></div>
         </div>
-        <div id="doorAndCharacterR3" class="close">
+        <div id="doorAndCharacterR3" class="doorsAndCharacters close">
           <div id="doorR3"><img src="../images/doors/right.png" alt="third open door on the right"></div>
           <div id="characterR3" class="rotationRightCharacters avatars"></div>
         </div>
       </div>
-      <div id="scoreTotal">Score total : 00</div>
+      <div id="divScoreTotal">Score total : <span id="scoreTotal">00</span></div>
     </div>
   </section>
   <!-- End of Game -->
   <!-- Twitter -->
   <div class="twitter"> <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://ryzlane.github.io/" data-text="EXCEPTIONNEL !! Avis aux Heticiens... Ce jeu est indispensable à votre survie !" data-via="guesswhohetic" data-size="large" data-hashtags="WeLoveGuessWHO">Tweet</a> </div>
-  <!-- End of Twitter -->
   <!-- End of Twitter -->
   <!-- Back to home -->
   <section class="backToHome">
@@ -81,10 +81,10 @@
   </section>
   <!-- End of Back to home -->
   <!-- Footer -->
-  <footer> 
-  <a href="../index.html">
-    <img src="../images/icones/logovrai.png" />
-  </a>
+  <footer>
+    <a href="../index.html">
+      <img src="../images/icones/logovrai.png" />
+    </a>
     <div class="social">
       <a href="https://www.facebook.com/GuessWhoHetic/" target="_blank"><img src="../images/socialnet/facebook.png" alt="Facebook" /></a>
       <a href="https://twitter.com/guesswhohetic" target="_blank"><img src="../images/socialnet/twitter.png" alt="Twitter" /></a>
@@ -96,28 +96,27 @@
   <audio autoplay loop id="musique">
     <source src="../sounds/gameMusic.mp3">
   </audio>
-<script src="../scripts/vendor/jquery.js"></script>
-    <script src="../scripts/vendor/what-input.js"></script>
-    <script src="../scripts/vendor/foundation.min.js"></script>
-    <script src="../scripts/tableCharacters.json"></script>
-    <script src="../scripts/gauges.json"></script>
-    <script src="../scripts/sounds.json"></script>
-    <script src="../scripts/main.js"></script>
-    <script src="../scripts/initAndRestart.js"></script>
-<!-- Twitter script -->
-<script>
-  ! function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0]
-      , p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-      js = d.createElement(s);
-      js.id = id;
-      js.src = p + '://platform.twitter.com/widgets.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }
-  }(document, 'script', 'twitter-wjs');
-</script>
-<!-- End of Twitter script -->
+  <script src="../scripts/vendor/jquery.js"></script>
+  <script src="../scripts/vendor/what-input.js"></script>
+  <script src="../scripts/vendor/foundation.min.js"></script>
+  <script src="../scripts/tableCharacters.json"></script>
+  <script src="../scripts/gauges.json"></script>
+  <script src="../scripts/generateCharacters.json"></script>
+  <script src="../scripts/initialisation.js"></script>
+  <!-- Twitter script -->
+  <script>
+    ! function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, 'script', 'twitter-wjs');
+  </script>
+  <!-- End of Twitter script -->
 </body>
 
 </html>
