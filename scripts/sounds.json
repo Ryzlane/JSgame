@@ -1,5 +1,0 @@
-var doorOpening = new Audio();
-doorOpening.src = '../sounds/openDoor.wav'; // Open a door
-
-var doorClosing = new Audio();
-doorClosing.src = '../sounds/closeDoor.wav'; // Close a door
