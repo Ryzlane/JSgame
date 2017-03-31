@@ -65,7 +65,7 @@ VIDEO
   font-size: 2.8em;
   color:#ffffff;
   text-align:center;
-  font-family:'Roboto', 'Arial';
+  font-family:'Roboto', sans-serif;
 }
 .videoClick {
   text-align:center;
@@ -122,7 +122,7 @@ INTRO
 }
 
 #charabutton:hover{
-  background-color:#85C62C ;
+  background-color:#85C62C;
   color: white;
   transition: 0.8s;
   border: 1px solid white;
@@ -310,7 +310,7 @@ Galleries
 
 
 .instagram h1 {
-  font-family:'futura';
+  font-family:'futura', sans-serif;
 }
 
 .divimage{
